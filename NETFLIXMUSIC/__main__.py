@@ -1,4 +1,3 @@
-
 import asyncio
 import importlib
 
@@ -13,7 +12,6 @@ from NETFLIXMUSIC.plugins import ALL_MODULES
 from NETFLIXMUSIC.utils.database import get_banned_users, get_gbanned
 from NETFLIXMUSIC.plugins.tools.clone import restart_bots
 from config import BANNED_USERS
-
 
 async def init():
     if not config.STRING1:
@@ -35,25 +33,26 @@ async def init():
     LOGGER("NETFLIXMUSIC.plugins").info("𝐀𝐥𝐥 𝐅𝐞𝐚𝐭𝐮𝐫𝐞𝐬 𝐋𝐨𝐚𝐝𝐞𝐝 𝐁𝐚𝐛𝐲🥳...")
     await userbot.start()
     await BABY.start()
+    
     try:
-        await BABY.stream_call("https://te.legra.ph/file/29f784eb49d230ab62e9e.mp4")
+        active_call = await BABY.get_active_call()
+        if not active_call:
+            LOGGER("NETFLIXMUSIC").error("𝗣𝗹𝗲𝗮𝘀𝗲 𝗦𝗧𝗔𝗥𝗧 𝗬𝗢𝗨𝗥 𝗩𝗢𝗜𝗖𝗘 𝗖𝗛𝗔𝗧 𝗕𝗘𝗙𝗢𝗥𝗘 𝗣𝗟𝗔𝗬𝗜𝗡𝗚 𝗠𝗨𝗦𝗜𝗖!")
+            exit()
+        await BABY.stream_call("https://envs.sh/t6W.mp4")
     except NoActiveGroupCall:
-        LOGGER("NETFLIXMUSIC").error(
-            "𝗣𝗹𝗭 𝗦𝗧𝗔𝗥𝗧 𝗬𝗢𝗨𝗥 𝗟𝗢𝗚 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘𝗖𝗛𝗔𝗧\𝗖𝗛𝗔𝗡𝗡𝗘𝗟\n\n𝗠𝗨𝗦𝗜𝗖 𝗕𝗢𝗧 𝗦𝗧𝗢𝗣........"
-        )
+        LOGGER("NETFLIXMUSIC").error("𝗣𝗹𝗲𝗮𝘀𝗲 𝗦𝗧𝗔𝗥𝗧 𝗬𝗢𝗨𝗥 𝗟𝗢𝗚 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘𝗖𝗛𝗔𝗧")
         exit()
-    except:
-        pass
+    except Exception as e:
+        LOGGER("NETFLIXMUSIC").error(f"Voice Chat Error: {e}")
+    
     await BABY.decorators()
     await restart_bots()
-    LOGGER("NETFLIXMUSIC").info(
-        "CONTACT ︎ME"
-    )
+    LOGGER("NETFLIXMUSIC").info("CONTACT ︎ME")
     await idle()
     await app.stop()
     await userbot.stop()
     LOGGER("NETFLIXMUSIC").info("𝗦𝗧𝗢𝗣 𝗣𝗿𝗼𝗕𝗼𝘁 𝗠𝗨𝗦𝗜𝗖🎻 𝗕𝗢𝗧..")
-
 
 if __name__ == "__main__":
     asyncio.get_event_loop().run_until_complete(init())
