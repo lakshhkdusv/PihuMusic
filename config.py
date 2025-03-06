@@ -20,7 +20,7 @@ BOT_USERNAME = getenv("BOT_USERNAME" , "Netflix_Musicbot")
 # --------------------------------------------------------
 BOT_NAME = getenv("BOT_NAME" , "Netflix Music")
 # ---------------------------------------------------------
-ASSUSERNAME = getenv("ASSUSERNAME" , "Asistant_Netflix")
+ASSUSERNAME = getenv("ASSUSERNAME" , "Asistant Netflix")
 # ---------------------------------------------------------
 
 
