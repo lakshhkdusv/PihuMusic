@@ -16,7 +16,7 @@ class Userbot(Client):
         )
 
     async def start(self):
-        LOGGER(__name__).info(f"Starting Assistants...")
+        LOGGER(__name__).info("Starting Assistants...")
         if config.STRING1:
             await self.one.start()
             try:
@@ -39,16 +39,30 @@ class Userbot(Client):
             LOGGER(__name__).info(f"Assistant Started as {self.one.name}")
 
     async def join_assistant(self, chat_id):
-        """Ensures the assistant is in the group before playing music."""
+        """Ensures the assistant joins the group before playing music."""
         if not self.one.is_connected:
             await self.one.start()
+
         try:
-            await self.one.join_chat(chat_id)
+            chat = await self.one.get_chat(chat_id)
+            if chat.type in ["supergroup", "group"]:
+                await self.one.join_chat(chat_id)
+                LOGGER(__name__).info(f"Assistant joined {chat_id}.")
+            else:
+                LOGGER(__name__).warning(f"Chat {chat_id} is not a valid group.")
         except Exception as e:
             LOGGER(__name__).error(f"Failed to join assistant in chat {chat_id}: {e}")
 
+            # Alternative: Try joining via an invite link
+            try:
+                invite_link = await self.one.export_chat_invite_link(chat_id)
+                await self.one.join_chat(invite_link)
+                LOGGER(__name__).info(f"Assistant joined {chat_id} via invite link.")
+            except Exception as e:
+                LOGGER(__name__).error(f"Failed to join assistant via invite link: {e}")
+
     async def stop(self):
-        LOGGER(__name__).info(f"Stopping Assistants...")
+        LOGGER(__name__).info("Stopping Assistants...")
         try:
             if config.STRING1:
                 await self.one.stop()
