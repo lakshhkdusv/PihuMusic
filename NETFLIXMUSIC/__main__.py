@@ -41,8 +41,14 @@ async def init():
             exit()
         await BABY.stream_call("https://envs.sh/t6W.mp4")
     except NoActiveGroupCall:
-        LOGGER("NETFLIXMUSIC").error("𝗣𝗹𝗲𝗮𝘀𝗲 𝗦𝗧𝗔𝗥𝗧 𝗬𝗢𝗨𝗥 𝗟𝗢𝗚 𝗚𝗥𝗢𝗨𝗣 𝗩𝗢𝗜𝗖𝗘𝗖𝗛𝗔𝗧")
-        exit()
+        LOGGER("NETFLIXMUSIC").error("𝗔𝘀𝘀𝗶𝘀𝘁𝗮𝗻𝘁 𝗡𝗼𝘁 𝗙𝗼𝘂𝗻𝗱 𝗶𝗻 𝗩𝗼𝗶𝗰𝗲 𝗖𝗵𝗮𝘁, 𝗔𝘁𝘁𝗲𝗺𝗽𝘁𝗶𝗻𝗴 𝘁𝗼 𝗝𝗼𝗶𝗻...")
+        try:
+            await userbot.join_chat(config.LOG_GROUP_ID)  # Replace with actual group ID
+            await asyncio.sleep(5)  # Wait for 5 sec before retrying
+            await BABY.stream_call("https://envs.sh/t6W.mp4")  # Retry streaming
+        except Exception as e:
+            LOGGER("NETFLIXMUSIC").error(f"Failed to Join Voice Chat: {e}")
+            exit()
     except Exception as e:
         LOGGER("NETFLIXMUSIC").error(f"Voice Chat Error: {e}")
     
