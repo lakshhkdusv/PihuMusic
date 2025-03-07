@@ -20,8 +20,8 @@ class Userbot(Client):
         if config.STRING1:
             await self.one.start()
             try:
-                await self.one.join_chat("Beats_Support")
-                await self.one.join_chat("Netflix_Music_Support")
+                await self.one.join_chat("NAINCY_UPDATES")
+                await self.one.join_chat("RADHA_MUSIC_REBOT")
             except Exception as e:
                 LOGGER(__name__).warning(f"Assistant failed to join support chats: {e}")
             assistants.append(1)
