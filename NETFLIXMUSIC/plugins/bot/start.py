@@ -28,8 +28,8 @@ from strings import get_string
 
 
 YUMI_PICS = [
-"https://envs.sh/t6b.mp4",
-"https://envs.sh/t6b.mp4",
+"https://envs.sh/ioK.mp4",
+"https://envs.sh/ioK.mp4",
 
 ]
 
