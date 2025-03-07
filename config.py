@@ -39,7 +39,7 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 600))
 LOGGER_ID = int(getenv("LOGGER_ID", -1001801207249))
 # ----------------------------------------------------------------
 # ----------------------------------------------------------------
-OWNER_ID = int(getenv("OWNER_ID", 5728246990))
+OWNER_ID = int(getenv("OWNER_ID", 5923034665))
 # -----------------------------------------------------------------
 # -----------------------------------------------------------------
 # config.py
@@ -54,7 +54,7 @@ HEROKU_API_KEY = getenv("HEROKU_API_KEY")
 # ----------------------------------------------------------------
 UPSTREAM_REPO = getenv(
     "UPSTREAM_REPO",
-    "https://github.com/Shruti1447/netflixmusic",
+    "https://github.com/lakshhkdusv/PihuMusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "main")
 GIT_TOKEN = getenv(
@@ -139,13 +139,13 @@ confirmer = {}
 # ------------------------------------------------------------------------
 # ------------------------------------------------------------------------
 START_IMG_URL = getenv(
-    "START_IMG_URL", "https://envs.sh/tla.jpg"
+    "START_IMG_URL", "https://envs.sh/ioK.mp4"
 )
 PING_IMG_URL = getenv(
-    "PING_IMG_URL", "https://envs.sh/hkO.jpg"
+    "PING_IMG_URL", "https://envs.sh/io3.jpg"
 )
 PLAYLIST_IMG_URL = "https://envs.sh/hkc.jpg"
-STATS_IMG_URL = "https://envs.sh/hkO.jpg"
+STATS_IMG_URL = "https://envs.sh/io3.jpg"
 TELEGRAM_AUDIO_URL = "https://envs.sh/hkc.jpg"
 TELEGRAM_VIDEO_URL = "https://envs.sh/hkc.jpg"
 STREAM_IMG_URL = "https://envs.sh/hki.jpg"
