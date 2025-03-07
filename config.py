@@ -14,13 +14,13 @@ API_HASH = getenv("API_HASH")
 # ------------------------------------------------------
 BOT_TOKEN = getenv("BOT_TOKEN")
 # -------------------------------------------------------
-OWNER_USERNAME = getenv("OWNER_USERNAME","Shrushthi_27")
+OWNER_USERNAME = getenv("OWNER_USERNAME","VISHNUSONI14")
 # --------------------------------------------------------
-BOT_USERNAME = getenv("BOT_USERNAME" , "Netflix_Musicbot")
+BOT_USERNAME = getenv("BOT_USERNAME" , "PIHU_MUSIC_REBOT")
 # --------------------------------------------------------
-BOT_NAME = getenv("BOT_NAME" , "Netflix Music")
+BOT_NAME = getenv("BOT_NAME" , "Pihu Music")
 # ---------------------------------------------------------
-ASSUSERNAME = getenv("ASSUSERNAME" , "Asistant Netflix")
+ASSUSERNAME = getenv("ASSUSERNAME" , "Pihu Assistant")
 # ---------------------------------------------------------
 
 
@@ -68,10 +68,10 @@ GIT_TOKEN = getenv(
 
 # ------------------------------------------------------------------------
 # -------------------------------------------------------------------------
-SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/Beats_Support")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/+UKieqJzwPvxiZGJl")
-SOURCE = getenv("SOURCE", "https://t.me/Shruti1447")
-CHAT = getenv("CHAT", "https://t.me/Netflix_music_support")
+SUPPORT_CHANNEL = getenv("SUPPORT_CHANNEL", "https://t.me/NAINCY_UPDATES")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/RADHA_MUSIC_SUPPORT")
+SOURCE = getenv("SOURCE", "https://t.me/VISHNUSONI_14")
+CHAT = getenv("CHAT", "https://t.me/NAINCY_UPDATES")
 # ------------------------------------------------------------------------------
 # -------------------------------------------------------------------------------
 
