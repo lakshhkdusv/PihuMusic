@@ -57,7 +57,7 @@ async def start_pm(client, message: Message, _):
         if name[0:4] == "help":
             keyboard = help_pannel(_)
             return await message.reply_photo(
-                random.choice(YUMI_PICS),
+                random.choice(NEXI_VID),
                 caption=_["help_1"].format(config.SUPPORT_CHAT),
                 reply_markup=keyboard,
             )
@@ -116,7 +116,7 @@ async def start_pm(client, message: Message, _):
     ]
         # out = private_panel(_)
         await message.reply_photo(
-            random.choice(YUMI_PICS),
+            random.choice(NEXI_VID),
             caption=_["c_start_2"].format(message.from_user.mention, a.mention),
             reply_markup=InlineKeyboardMarkup(out),
         )
